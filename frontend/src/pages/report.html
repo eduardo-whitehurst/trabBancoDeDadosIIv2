@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa de Report</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/report.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/reset.css"/>
+    <script src="../service/mapaReport.js"></script>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="logo">
+                <a href="../../public/index.html"><img src="../assets/img/logo.png" alt="Logotipo da N-REPORT"></a>
+            </div>
+            <div class="menu">
+                <a href="../../public/index.html"><button>HOME</button></a>
+                <a href="../pages/report.html"><button style="text-decoration: underline #CC00FF">REPORT</button></a>
+                <a href="../pages/ocorrencias.html"><button>OCORRÊNCIAS</button></a>
+                <a href="../pages/dashbord.html"><button>DASHBORD</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="corpo-report">
+            <div id="form" class="form">
+                <h2>REPORTAR</h2>
+                <form method="post">
+                    <div class="formulario-report">
+                        <!-- <label for="descricao">Descreva a ocorrência:</label> -->
+                        <input type="text" id="titulo" placeholder="Titulo" />
+                        <input type="text" id="descricao" placeholder="Descreva a ocorrência" />
+                        <!-- <label for="tipo">Escolha o tipo do crime:</label> -->
+                        <input list="tipos" name="tipo" id="tipo" placeholder="Tipo do crime">
+                        <datalist id="tipos">
+                            <option value="Furto">
+                            <option value="Roubo">
+                            <option value="Sequestro">
+                            <option value="Homicídio">
+                            <option value="Outros">
+                        </datalist>
+                        <!-- <label for="data" >Data:</label> -->
+                        <input type="date" id="data"/>
+                        <!-- <label for="hora">Hora:</label> -->
+                        <input type="time" id="hora" />
+                    </div>
+                </form>
+                <div class="botao-report">
+                    <button type="button" onclick="salvar()">REPORTAR</button>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+        </div>
+    </main>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+</body>
+
+</html>
