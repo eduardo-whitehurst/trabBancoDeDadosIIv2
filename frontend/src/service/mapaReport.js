@@ -1,5 +1,7 @@
 let mapa;
 let marker;
+let currentLat;
+let currentLng;
 
 let center = {lat: -6.888463202449027, lng: -38.558930105104125};
 

@@ -57,7 +57,7 @@ async function initMap() {
 
         document.getElementById("titulo-edit").value = ponto.titulo;
         document.getElementById("descricao-edit").value = ponto.descricao;
-        document.getElementById("tipo-edit").value = ponto.tipo;
+        // document.getElementById("tipo-edit").value = ponto.tipo;
         document.getElementById("data-edit").value = ponto.data;
         document.getElementById("hora-edit").value = ponto.hora;
         document.getElementById("popup-edit-btn").addEventListener("click", ()=>{

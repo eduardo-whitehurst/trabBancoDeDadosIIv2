@@ -77,14 +77,29 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
+
   .close-btn, .close-btn-edit {
     cursor: pointer;
     font-weight: bold;
     color: #333;
+    border: none;
+    background-color: #fff;
+    margin-bottom: 5px;
   }
 
   #mapEdit {
     width: 500px;
     height: 500px;
     float:right;
+  }
+
+  .btn-popup {
+    background: #CC00FF;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    font-family: 'Montserrat';
   }
