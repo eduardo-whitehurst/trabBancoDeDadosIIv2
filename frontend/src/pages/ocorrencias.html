@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mapa de Ocorrências</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/ocorrencias.css">
+  <link rel="stylesheet" type="text/css" href="../styles/reset.css" />
+  <script src="../service/mapaOcorrencias.js"></script>
+  <!-- <script src="../src/mapRepost.js"></script> -->
+</head>
+
+<body>
+  <div class="menu">
+    <div class="logo">
+      <a href="../../public/index.html"><img src="../assets/img/logo.png" alt="Logotipo da N-REPORT"></a>
+      <p>Confira as ultimas ocorrências reportadas ao nosso sistema. Recomendamos que você evite tais áreas em um
+        período de 24hrs. </p>
+      <p>Caso queira informar uma ocorrência, clique no botão abaixo</p>
+      <a href="../pages/report.html"><button>REPORTAR</button></a>
+    </div>
+  </div>
+  <div id="map" class="conteudo"></div>
+
+  <div id="popup-container" class="popup-container">
+    <div class="popup">
+      <span class="close-btn" onclick="closePopup()">X</span>
+      <h2 id="popup-titulo"></h2>
+      <p id="popup-descricao"></p>
+      <p id="popup-tipo"></p>
+      <p id="popup-data"></p>
+      <p id="popup-hora"></p>
+      <span id="popup-delete">deletar</span>
+      <span id="popup-edit-anterior">editar</span>
+    </div>
+  </div>
+
+  <div id="popup-edit" class="popup-edit">
+    <div class="popup-edit-div">
+      <span class="close-btn-edit" onclick="closePopupEdit()">X</span>
+      <form method="post">
+        <div class="formulario-report">
+            <input type="text" id="titulo-edit"/>
+            <input type="text" id="descricao-edit" placeholder="Descreva a ocorrência" />
+            <input list="tipos" name="tipo" id="tipo-edit" placeholder="Tipo do crime">
+            <datalist id="tipos">
+                <option value="Furto">
+                <option value="Roubo">
+                <option value="Sequestro">
+                <option value="Homicídio">
+                <option value="Outros">
+            </datalist>
+            <input type="date" id="data-edit"/>
+            <input type="time" id="hora-edit" />
+        </div>
+    </form>
+    <div id="mapEdit"></div>
+      <span id="popup-edit-btn">Concluir</span>
+    </div>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+</body>
+
+</html>
