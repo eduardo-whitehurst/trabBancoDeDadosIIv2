@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashbord Gráfica</title>
+    <script src="https://unpkg.com/@mongodb-js/charts-embed-dom"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/dashboard.css"/>
+    <script src="../service/mapaReport.js"></script>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="logo">
+                <a href="../../public/index.html"><img src="../assets/img/logo.png" alt="Logotipo da N-REPORT"></a>
+            </div>
+            <div class="menu">
+                <a href="../../public/index.html"><button>HOME</button></a>
+                <a href="./report.html"><button>REPORT</button></a>
+                <a href="./ocorrencias.html"><button>OCORRÊNCIAS</button></a>
+                <a href="./dashboard.html"><button style="text-decoration: underline #CC00FF">DASHBOARD</button></a>
+            </div>
+        </div>
+    </header>
+    <div>
+        <h2>DASHBORD</h2>
+        <p>Nesta aba você será capaz de visualizar de forma gráfica todos os crimes registrados. Isso vai facilitar na hora de obter ideias como gestor!</p>
+    </div>
+    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-bdii-lsydf/embed/charts?id=655ba206-a024-4ef7-8657-5083b3e1e908&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-bdii-lsydf/embed/charts?id=655ba19d-85d9-48be-86f1-e4c4e1f76361&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-bdii-lsydf/embed/charts?id=65579ffe-a4d1-47f2-8792-020da96bec0d&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+</body>
+
+</html>

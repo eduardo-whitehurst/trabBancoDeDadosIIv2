@@ -1,0 +1,27 @@
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 100px 0px 100px;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.menu a button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.menu a button:hover {
+    text-decoration: underline #CC00FF;
+    transition: 300ms;
+}
