@@ -1,5 +1,5 @@
 # 1ª Atividade Avaliativa - Banco de Dados II
-<img src="./public/img/capa.jpg">
+<img src="./frontend/src/assets/img/capa.jpg">
 <p>Este projeto foi desenvolvido como requisito para obtenção de créditos curriculares específicos da cadeira de Banco de Dados II do Instituto Federal da Paraíba. O projeto tem como finalidade principal reportar e servir como um repositório de crimes. Mais informações sobre o desenvolvimento estão expostas abaixo seguidos do passo a passo para execução do software.</p>
 <h2>👷‍ - Habilidades Desenvolvidas</h2>
 <p>✅ Manipulação de DOM com JavaScript</p>
