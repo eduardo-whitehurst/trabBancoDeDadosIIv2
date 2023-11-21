@@ -1,9 +1,26 @@
 let mapa;
 let marker;
-let currentLat;
-let currentLng;
 
 let center = {lat: -6.888463202449027, lng: -38.558930105104125};
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        center.lat = position.coords.latitude;
+        center.lng = position.coords.longitude;
+        initMap();
+      },
+      (error) => {
+        console.error("Erro ao obter a posição do usuário", error);
+        initMap();
+      }
+    );
+  } else {
+    console.error("Geolocalização não suportada");
+    initMap();
+  }
+});
 
 async function initMap() {
   mapa = new google.maps.Map(document.getElementById("map"), {
@@ -12,17 +29,17 @@ async function initMap() {
   });
 
   marker = new google.maps.Marker({
-      map: mapa,
-      position: center,
-      draggable: true
+    map: mapa,
+    position: center,
+    draggable: true,
   });
 
   mapa.addListener("click", (evt) => {
     addMarker(evt);
   });
 
-  marker.addListener('position_changed', ()=>{
-      mapa.setCenter(marker.position);
+  marker.addListener('position_changed', () => {
+    mapa.setCenter(marker.position);
   });
 }
 
