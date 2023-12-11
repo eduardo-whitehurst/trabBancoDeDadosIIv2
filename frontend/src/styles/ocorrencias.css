@@ -45,7 +45,7 @@ body {
 
   .conteudo {
     background-color: #292929;
-    position: absolute;
+    position: fixed;
     margin: 1vh 1vw;
     width: 98vw;
     height: 98vh;

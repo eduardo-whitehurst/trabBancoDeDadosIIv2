@@ -4,10 +4,17 @@
 <head>
   <title>Mapa de Ocorrências</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <link rel="stylesheet" type="text/css" href="../styles/ocorrencias.css">
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
   <link rel="stylesheet" type="text/css" href="../styles/reset.css" />
-  <script src="../service/mapaOcorrencias.js"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/ocorrencias.css">
   <!-- <script src="../src/mapRepost.js"></script> -->
 </head>
 
@@ -17,12 +24,14 @@
       <a href="../../public/index.html"><img src="../assets/img/logo.png" alt="Logotipo da N-REPORT"></a>
       <p>Confira as ultimas ocorrências reportadas ao nosso sistema. Recomendamos que você evite tais áreas em um
         período de 24hrs. </p>
-      <p>Caso queira informar uma ocorrência, clique no botão abaixo</p>
-      <a href="../pages/report.html"><button>REPORTAR</button></a>
+        <p>Caso queira informar uma ocorrência, clique no botão abaixo</p>
+        <a href="../pages/report.html"><button>REPORTAR</button></a>
+      </div>
     </div>
-  </div>
-  <div id="map" class="conteudo"></div>
+    <div id="map" class="conteudo"></div>
+  <!-- <div id="map" class="conteudo"></div> -->
 
+  
   <div id="popup-container" class="popup-container">
     <div class="popup">
       <button class="close-btn" onclick="closePopup()">X</button>
@@ -35,32 +44,36 @@
       <button id="popup-edit-anterior" class="btn-popup">editar</button>
     </div>
   </div>
-
+  
   <div id="popup-edit" class="popup-edit">
     <div class="popup-edit-div">
       <span class="close-btn-edit" onclick="closePopupEdit()">X</span>
       <form method="post">
         <div class="formulario-report">
-            <input type="text" id="titulo-edit"/>
-            <input type="text" id="descricao-edit" placeholder="Descreva a ocorrência" />
-            <input list="tipos" name="tipo" id="tipo-edit" placeholder="Tipo do crime">
-            <datalist id="tipos">
-                <option value="Furto">
-                <option value="Roubo">
+          <input type="text" id="titulo-edit"/>
+          <input type="text" id="descricao-edit" placeholder="Descreva a ocorrência" />
+          <input list="tipos" name="tipo" id="tipo-edit" placeholder="Tipo do crime">
+          <datalist id="tipos">
+            <option value="Furto">
+              <option value="Roubo">
                 <option value="Sequestro">
-                <option value="Homicídio">
-                <option value="Outros">
-            </datalist>
-            <input type="date" id="data-edit"/>
-            <input type="time" id="hora-edit" />
-        </div>
-    </form>
-    <div id="mapEdit"></div>
-      <button id="popup-edit-btn" class="btn-popup">Concluir</button>
-    </div>
-  </div>
+                  <option value="Homicídio">
+                    <option value="Outros">
+                    </datalist>
+                    <input type="date" id="data-edit"/>
+                    <input type="time" id="hora-edit" />
+                  </div>
+                </form>
+                <div id="mapEdit"></div>
+                <button id="popup-edit-btn" class="btn-popup">Concluir</button>
+              </div>
+            </div>
+            
+            <!-- <script src="../service/mapaReportTest.js"></script> -->
+            <script src="../service/mapaOcorrencias.js"></script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
-</body>
-
+            
+            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script> -->
+          </body>
+          
 </html>
