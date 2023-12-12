@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delegacias</title>
+    <script src="https://unpkg.com/@mongodb-js/charts-embed-dom"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/delegacias.css"/>
+    <script src="../service/mapaReport.js"></script>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="logo">
+                <a href="../../public/index.html"><img src="../assets/img/logo.png" alt="Logotipo da N-REPORT"></a>
+            </div>
+            <div class="menu">
+                <a href="../../public/index.html"><button>HOME</button></a>
+                <a href="./report.html"><button>REPORT</button></a>
+                <a href="./ocorrencias.html"><button>OCORRÊNCIAS</button></a>
+                <a href="./dashboard.html"><button>DASHBOARD</button></a>
+                <a href="./dashboard.html"><button style="text-decoration: underline #CC00FF">DELEGACIAS</button></a>
+            </div>
+        </div>
+    </header>
+    <div class="dashboard">
+        <h2>DELEGACIAS</h2>
+        <div class="alinhamento">
+            <label for="tipoDelegacia">Escolha o Tipo de Delegacia:</label>
+            <select id="tipoDelegacia" onchange="filtrarDelegacias()">
+                <option value="A">Delegacia A</option>
+                <option value="B">Delegacia B</option>
+            </select>
+
+            <ul id="listaDelegacias" class="listaDelegacias">
+            </ul>
+        </div>
+    </div>
+
+    <script src="../service/delegacias.js"></script>
+</body>
+
+</html>
